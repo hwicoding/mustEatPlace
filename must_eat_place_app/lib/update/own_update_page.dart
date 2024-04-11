@@ -21,10 +21,9 @@ class _OwnUpdatePageState extends State<OwnUpdatePage> {
   late TextEditingController phoneController;
   late TextEditingController estimateController;
   late DatabaseHandler handler;
-  late double latData; // 위도
-  late double longData; // 경도
+  late double latData;
+  late double longData;
 
-  // Gallery에서 사진 가져오기
   ImagePicker picker = ImagePicker();
   XFile? imageFile;
 
@@ -56,18 +55,7 @@ class _OwnUpdatePageState extends State<OwnUpdatePage> {
           child: Row(
             children: [
               Text(
-                '       나만의 ',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '맛집 ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 168, 14, 3),
-                ),
-              ),
-              Text(
-                '리스트 추가하기',
+                '나만의 맛집 리스트 수정',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ],

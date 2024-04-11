@@ -76,18 +76,7 @@ class _EveryoneInsertPageState extends State<EveryoneInsertPage> {
           child: Row(
             children: [
               Text(
-                '       모두의 ',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '맛집 ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 168, 14, 3),
-                ),
-              ),
-              Text(
-                '리스트 추가하기',
+                '모두의 맛집리스트 추가',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ],

@@ -44,15 +44,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           indicatorPadding: const EdgeInsets.all(2),
           tabs: const [
             Tab(
-              icon: Icon(Icons.food_bank),
+              icon: Icon(Icons.list_alt_outlined),
               text: '나만의 맛집',
             ),
             Tab(
-              icon: Icon(Icons.food_bank),
+              icon: Icon(Icons.list_alt_outlined),
               text: '우리만의 맛집',
             ),
             Tab(
-              icon: Icon(Icons.food_bank),
+              icon: Icon(Icons.list_alt_outlined),
               text: '모두의 맛집',
             ),
           ],

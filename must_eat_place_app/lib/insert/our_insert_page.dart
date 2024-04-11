@@ -20,11 +20,9 @@ class _OurInsertPageState extends State<OurInsertPage> {
   late TextEditingController phoneController;
   late TextEditingController estimateController;
 
-  // late Position currentPosition;
-  late double latData; // 위도
-  late double longData; // 경도
+  late double latData;
+  late double longData;
 
-  // Gallery에서 사진 가져오기
   ImagePicker picker = ImagePicker();
   XFile? galleryImageFile;
 
@@ -42,24 +40,20 @@ class _OurInsertPageState extends State<OurInsertPage> {
   checkLocationPermission() async {
     LocationPermission permission = await Geolocator.checkPermission();
 
-    // 거절
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
     }
 
-    // 다신 사용하지 않음
     if (permission == LocationPermission.deniedForever) {
       return;
     }
 
-    // 앱을 사용 중 or 항상 허용 일때,
     if (permission == LocationPermission.whileInUse ||
         permission == LocationPermission.always) {
       getCurrentLocation();
     }
   }
 
-  // getCurrentLocation()
   getCurrentLocation() async {
     await Geolocator.getCurrentPosition(
             desiredAccuracy: LocationAccuracy.best,
@@ -69,9 +63,7 @@ class _OurInsertPageState extends State<OurInsertPage> {
       longData = position.longitude;
 
       setState(() {});
-    }).catchError((e) {
-      // print(e);
-    });
+    }).catchError((e) {});
   }
 
   @override
@@ -82,18 +74,7 @@ class _OurInsertPageState extends State<OurInsertPage> {
           child: Row(
             children: [
               Text(
-                '      우리만의 ',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '맛집 ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 168, 14, 3),
-                ),
-              ),
-              Text(
-                '리스트 추가하기',
+                '우리들의 맛집 리스트 추가',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ],

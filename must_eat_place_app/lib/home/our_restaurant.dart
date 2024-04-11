@@ -94,7 +94,6 @@ class _OurRestaurantState extends State<OurRestaurant> {
                     ActionPane(motion: const DrawerMotion(), children: [
                   SlidableAction(
                     onPressed: (context) {
-                      // 수정 Action
                       Get.to(const OurUpdatePage(), arguments: eatlist[index])!
                           .then((value) => reloadData());
                     },
@@ -191,7 +190,6 @@ class _OurRestaurantState extends State<OurRestaurant> {
                 ),
               ),
             );
-            // } else {}
           }),
     );
   }

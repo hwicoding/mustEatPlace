@@ -20,11 +20,9 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
   late TextEditingController phoneController;
   late TextEditingController estimateController;
   late DatabaseHandler handler;
-  // late Position currentPosition;
-  late double latData; // 위도
-  late double longData; // 경도
+  late double latData;
+  late double longData;
 
-  // Gallery에서 사진 가져오기
   ImagePicker picker = ImagePicker();
   XFile? imageFile;
 
@@ -43,24 +41,20 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
   checkLocationPermission() async {
     LocationPermission permission = await Geolocator.checkPermission();
 
-    // 거절
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
     }
 
-    // 다신 사용하지 않음
     if (permission == LocationPermission.deniedForever) {
       return;
     }
 
-    // 앱을 사용 중 or 항상 허용 일때,
     if (permission == LocationPermission.whileInUse ||
         permission == LocationPermission.always) {
       getCurrentLocation();
     }
   }
 
-  // getCurrentLocation()
   getCurrentLocation() async {
     await Geolocator.getCurrentPosition(
             desiredAccuracy: LocationAccuracy.best,
@@ -70,9 +64,7 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
       longData = position.longitude;
 
       setState(() {});
-    }).catchError((e) {
-      // print(e);
-    });
+    }).catchError((e) {});
   }
 
   @override
@@ -83,18 +75,7 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
           child: Row(
             children: [
               Text(
-                '       나만의 ',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '맛집 ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 168, 14, 3),
-                ),
-              ),
-              Text(
-                '리스트 추가하기',
+                '나의 맛집 리스트 추가',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
@@ -119,7 +100,6 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
                         child: const Text('사진 추가하기')),
                   ),
                   Container(
-                    // width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height / 6,
                     decoration: BoxDecoration(
                         border: Border.all(
@@ -142,7 +122,6 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
                     ),
                   ),
                   Padding(
-                    // 위치 (위도 경도)
                     padding: const EdgeInsets.fromLTRB(0, 20, 0, 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -169,7 +148,6 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
                     ),
                   ),
                   Padding(
-                    // 이름 textField
                     padding: const EdgeInsets.fromLTRB(0, 10, 0, 15),
                     child: TextField(
                       controller: nameController,
@@ -178,7 +156,6 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
                     ),
                   ),
                   Padding(
-                    // 전화번호 textField
                     padding: const EdgeInsets.fromLTRB(0, 10, 0, 15),
                     child: TextField(
                       controller: phoneController,
@@ -188,7 +165,6 @@ class _OwnInsertPageState extends State<OwnInsertPage> {
                     ),
                   ),
                   Padding(
-                    // 평가 textField
                     padding: const EdgeInsets.fromLTRB(0, 10, 0, 15),
                     child: SizedBox(
                       width: 400,

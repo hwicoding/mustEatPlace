@@ -52,18 +52,7 @@ class _EveryoneUpdatePageState extends State<EveryoneUpdatePage> {
           child: Row(
             children: [
               Text(
-                '       나만의 ',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '맛집 ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 168, 14, 3),
-                ),
-              ),
-              Text(
-                '리스트 추가하기',
+                '모두의 맛집 리스트 수정',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ],

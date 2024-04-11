@@ -21,26 +21,17 @@ class _EveryoneRestaurantState extends State<EveryoneRestaurant> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+        backgroundColor: Theme.of(context).colorScheme.tertiaryContainer,
         title: const Center(
           child: Padding(
             padding: EdgeInsets.all(8.0),
             child: Row(
               children: [
                 Text(
-                  '모두의 ',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  '맛집',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 168, 14, 3)),
-                ),
-                Text(
-                  ' 리스트',
+                  '모두가 경험한 맛집 리스트',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
+                    fontSize: 20,
                   ),
                 ),
               ],
@@ -131,8 +122,8 @@ class _EveryoneRestaurantState extends State<EveryoneRestaurant> {
           child: Row(
             children: [
               SizedBox(
-                width: MediaQuery.of(context).size.width / 3,
-                height: MediaQuery.of(context).size.height / 6,
+                width: MediaQuery.of(context).size.width / 4,
+                height: MediaQuery.of(context).size.height / 8,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: Image.network(

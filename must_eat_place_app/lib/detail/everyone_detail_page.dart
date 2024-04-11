@@ -33,20 +33,8 @@ class _EveryoneDetailPageState extends State<EveryoneDetailPage> {
             child: const Row(
               children: [
                 Text(
-                  "나만의 ",
+                  "모두가 찾은 맛집 위치",
                   style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  '맛집',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 168, 14, 3)),
-                ),
-                Text(
-                  ' 위치',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
                 ),
               ],
             ),
