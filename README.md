@@ -4,7 +4,7 @@
 - FireBase를 이용한 모두의 맛집
 
 ## 기간
-- 2024-04-06 ~ 2024-07-22
+- 2024-04-06 ~ 2024-04-07
 
 ## 사진
 <img src= https://github.com/user-attachments/assets/917e56ec-0bf3-4491-8943-60f4bb11bdfa width="200" height="430"/>
