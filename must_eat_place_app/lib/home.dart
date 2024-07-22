@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'everyone_restaurant.dart';
-import 'our_restaurant.dart';
-import 'own_restaurant.dart';
+import 'home/everyone_restaurant.dart';
+import 'home/our_restaurant.dart';
+import 'home/own_restaurant.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -44,15 +44,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           indicatorPadding: const EdgeInsets.all(2),
           tabs: const [
             Tab(
-              icon: Icon(Icons.list_alt_outlined),
+              icon: Icon(Icons.food_bank),
               text: '나만의 맛집',
             ),
             Tab(
-              icon: Icon(Icons.list_alt_outlined),
+              icon: Icon(Icons.food_bank),
               text: '우리만의 맛집',
             ),
             Tab(
-              icon: Icon(Icons.list_alt_outlined),
+              icon: Icon(Icons.food_bank),
               text: '모두의 맛집',
             ),
           ],

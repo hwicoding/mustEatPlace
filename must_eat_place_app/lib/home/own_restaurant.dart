@@ -36,10 +36,19 @@ class _OwnRestaurantState extends State<OwnRestaurant> {
             child: Row(
               children: [
                 Text(
-                  "내가 경험한 맛집 리스트",
+                  "나만의 ",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  '맛집',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 168, 14, 3)),
+                ),
+                Text(
+                  ' 리스트',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
                   ),
                 ),
               ],
@@ -106,8 +115,8 @@ class _OwnRestaurantState extends State<OwnRestaurant> {
                         child: Row(
                           children: [
                             SizedBox(
-                              width: MediaQuery.of(context).size.width / 4,
-                              height: MediaQuery.of(context).size.height / 8,
+                              width: MediaQuery.of(context).size.width / 3,
+                              height: MediaQuery.of(context).size.height / 6,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: Image.memory(
@@ -138,7 +147,7 @@ class _OwnRestaurantState extends State<OwnRestaurant> {
                                         width:
                                             MediaQuery.of(context).size.width /
                                                 3 *
-                                                1.6,
+                                                1.4,
                                         height:
                                             MediaQuery.of(context).size.height /
                                                 16,
@@ -166,7 +175,7 @@ class _OwnRestaurantState extends State<OwnRestaurant> {
                                         icon: const Icon(Icons.call),
                                         label:
                                             Text(snapshot.data![index].phone),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ],
